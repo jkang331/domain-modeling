@@ -3,26 +3,26 @@ INFO 498B - Project 4
 
 ###### Make the Unit Tests Pass
 
- – clone the repo at [Link](https://bitbucket.org/TedNeward/uwsimpledomainmodel.git)
- – this consists of:
-  - SimpleDomainModel: "standard" command-line project 
-  - SimpleDomainModelTests: set of unit tests exercising the above
- – as written, the tests will not pass; it won't even compile! – your job: make the tests pass! WITHOUT changing them!
+ * clone the repo at [Link](https://bitbucket.org/TedNeward/uwsimpledomainmodel.git)
+ * this consists of:
+  * SimpleDomainModel: "standard" command-line project 
+  * SimpleDomainModelTests: set of unit tests exercising the above
+ * as written, the tests will not pass; it won't even compile! – your job: make the tests pass! WITHOUT changing them!
 
 ###### Create a value type: Money
- – Properties: amount & currency
- – Methods:
-  - convert: convert from one currency to another 
-  - add, subtract: do the math thing
- – If you use a String for currency, make sure that only the four listed are accepted
- – Note that it is totally acceptable to add/subtract GBP to EUR or CAN
+ * Properties: amount & currency
+ * Methods:
+  * convert: convert from one currency to another 
+  * add, subtract: do the math thing
+ * If you use a String for currency, make sure that only the four listed are accepted
+ * Note that it is totally acceptable to add/subtract GBP to EUR or CAN
 
 ###### Create a class: Job
- – Properties: title & salary
- – Salaries can be either per-hour or per-year
- – Methods:
-  - calculateIncome, which should accept a number of hours worked this year; if this is a per-year salary, then ignore the hours
-  - raise, which will bump up the salary by the passed percentage
+ * Properties: title & salary
+ * Salaries can be either per-hour or per-year
+ * Methods:
+  * calculateIncome, which should accept a number of hours worked this year; if this is a per-year salary, then ignore the hours
+  * raise, which will bump up the salary by the passed percentage
 
 ###### Create a class: Person
 – It have the following properties: firstName, lastName, age, job (Job), & spouse (Person)
