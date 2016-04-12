@@ -201,7 +201,7 @@ public class Person {
 //
 public class Family {
     private var members : [Person] = []
-    private var canHaveKids : Bool = false //QUESTION: CAN I HAVE THIS ADDITIONAL VAR?
+    private var canHaveKids : Bool = false
     
     public init(spouse1: Person, spouse2: Person) {
         if (spouse1.spouse == nil && spouse2.spouse == nil && spouse1.age > 18 && spouse2.age > 18) {
@@ -213,7 +213,6 @@ public class Family {
         }
     }
     
-    // QUESTION: DO YOU WANT ME TO SET THE AGE TO 0?? 
     public func haveChild(child: Person) -> Bool {
         if canHaveKids {
             members.append(child)
@@ -222,8 +221,6 @@ public class Family {
         return false
     }
     
-    
-    //QUESTION: HOW TO CALCULATE HOURLY INCOME PEOPLE
     public func householdIncome() -> Int {
         var total: Int = 0
         for person in members {
@@ -233,9 +230,18 @@ public class Family {
         }
         return total;
     }
+    
+    // Additional func demonstrating updating var canHaveKids when removing members from Family
+    public func removeMember(person: Person) -> Bool {
+        var count = 0;
+        var foundAndRemoved = false;
+        for i in members {
+            if i === person {
+                members.removeAtIndex(count)
+                foundAndRemoved = true;
+            }
+            count += 1;
+        }
+        return foundAndRemoved
+    }
 }
-
-
-
-
-
